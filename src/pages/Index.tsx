@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Zap, Move, Ruler, ArrowRight, Lightbulb, FlaskConical, Target } from "lucide-react";
 import SectionHeader from "@/components/SectionHeader";
 import ChatBot from "@/components/ChatBot";
-
+import ChatNotification from "@/components/ChatNotification"
 const pillars = [
   {
     icon: <Zap className="w-6 h-6" />,
@@ -60,6 +60,7 @@ const Index = () => {
   return (
     <div>
       {/* Hero */}
+
       <section className="relative overflow-hidden" style={{ background: "var(--gradient-hero)" }}>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(210_100%_55%/0.08),transparent_70%)]" />
         <div className="section-container relative py-24 md:py-36">
@@ -97,6 +98,7 @@ const Index = () => {
         </div>
       </section>
         {/* ChatBot */}
+    <ChatNotification />
     <ChatBot />
 
       {/* How Hypertrophy Works */}
