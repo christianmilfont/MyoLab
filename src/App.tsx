@@ -14,6 +14,7 @@ import ReferenciasPage from "./pages/ReferenciasPage";
 import NotFound from "./pages/NotFound";
 import ChatBot from "./components/ChatBot";
 import ChatNotification from "./components/ChatNotification";
+import ScrollToTop from "./components/ScrollToTop";
 
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Layout>
           <Routes>
             <Route path="/" element={<Index />} />
