@@ -4,6 +4,7 @@ import { Zap, Move, Ruler, ArrowRight, Lightbulb, FlaskConical, Target } from "l
 import SectionHeader from "@/components/SectionHeader";
 import ChatBot from "@/components/ChatBot";
 import ChatNotification from "@/components/ChatNotification"
+import mascot from "@/assets/mascotao-preview.png";
 const pillars = [
   {
     icon: <Zap className="w-6 h-6" />,
@@ -61,42 +62,75 @@ const Index = () => {
     <div>
       {/* Hero */}
 
-      <section className="relative overflow-hidden" style={{ background: "var(--gradient-hero)" }}>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(210_100%_55%/0.08),transparent_70%)]" />
-        <div className="section-container relative py-24 md:py-36">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="max-w-3xl"
-          >
-            <span className="info-badge mb-6 inline-block">Biomecânica & Hipertrofia</span>
-            <h1 className="font-display text-4xl md:text-6xl font-bold text-foreground leading-tight">
-              A ciência por trás do{" "}
-              <span className="gradient-text">crescimento muscular</span>
-            </h1>
-            <p className="mt-6 text-lg text-muted-foreground max-w-xl leading-relaxed">
-              Entenda como a tensão mecânica, a biomecânica dos exercícios e a amplitude de
-              movimento se combinam para gerar hipertrofia. Conteúdo baseado em evidências
-              científicas.
-            </p>
-            <div className="flex flex-wrap gap-3 mt-8">
-              <Link
-                to="/ciencia"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium text-sm hover:bg-primary/90 transition-colors"
-              >
-                Explorar a Ciência <ArrowRight className="w-4 h-4" />
-              </Link>
-              <Link
-                to="/interativo"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-secondary text-secondary-foreground font-medium text-sm hover:bg-secondary/80 transition-colors border border-border"
-              >
-                Simulador Interativo
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      <section
+  className="relative overflow-hidden"
+  style={{ background: "var(--gradient-hero)" }}
+>
+
+  {/* Mascote grande no fundo */}
+  <img
+    src={mascot}
+    alt="MyoLab Mascot"
+    className="
+    absolute
+    right-[-150px]
+    top-[-50px]
+    w-[1000px]
+    opacity-70
+    pointer-events-none
+    select-none
+    z-0
+    "
+  />
+
+  {/* Glow radial */}
+  <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,hsl(210_100%_55%/0.15),transparent_70%)]" />
+
+  {/* Conteúdo */}
+  <div className="section-container relative py-24 md:py-36 z-10">
+
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7 }}
+      className="max-w-3xl"
+    >
+      <span className="info-badge mb-6 inline-block">
+        Biomecânica & Hipertrofia
+      </span>
+
+      <h1 className="font-display text-4xl md:text-6xl font-bold text-foreground leading-tight">
+        A ciência por trás do{" "}
+        <span className="gradient-text">crescimento muscular</span>
+      </h1>
+
+      <p className="mt-6 text-lg text-muted-foreground max-w-xl leading-relaxed">
+        Entenda como a tensão mecânica, a biomecânica dos exercícios e a amplitude de
+        movimento se combinam para gerar hipertrofia. Conteúdo baseado em evidências
+        científicas.
+      </p>
+
+      <div className="flex flex-wrap gap-3 mt-8">
+        <Link
+          to="/ciencia"
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium text-sm hover:bg-primary/90 transition-colors"
+        >
+          Explorar a Ciência <ArrowRight className="w-4 h-4" />
+        </Link>
+
+        <Link
+          to="/interativo"
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-secondary text-secondary-foreground font-medium text-sm hover:bg-secondary/80 transition-colors border border-border"
+        >
+          Simulador Interativo
+        </Link>
+      </div>
+
+    </motion.div>
+
+  </div>
+
+</section>
         {/* ChatBot */}
     <ChatNotification />
     <ChatBot />

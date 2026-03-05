@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { searchQuestions } from "../lib/searchQuestions"
-
+import botIcon from "../assets/mascotao-preview.png"
 import { SiChatbot } from "react-icons/si"
 import { FaUser } from "react-icons/fa"
 import { IoClose } from "react-icons/io5"
