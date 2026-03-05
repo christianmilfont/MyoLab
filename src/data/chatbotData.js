@@ -34,11 +34,8 @@ export const chatbotData = [
     keywords: ["amplitude", "rom", "range"],
     question: "Amplitude completa é melhor para hipertrofia?",
     answer: `
-        Treinar em maior amplitude de movimento geralmente produz
-        melhores resultados de hipertrofia.
-
-        Isso acontece porque o músculo passa por uma maior variação
-        de comprimento e é exposto a maior tensão mecânica.
+        Treinar em maior amplitude de movimento, geralmente, produz melhores resultados de hipertrofia. 
+        Isso acontece, porque o músculo passa por uma maior variação de comprimento e é exposto à maior tensão mecânica.
     `,
     reference: "Schoenfeld (2010)"
   }
