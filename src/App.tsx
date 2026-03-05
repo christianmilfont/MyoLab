@@ -12,6 +12,8 @@ import InterativoPage from "./pages/InterativoPage";
 import AvancadoPage from "./pages/AvancadoPage";
 import ReferenciasPage from "./pages/ReferenciasPage";
 import NotFound from "./pages/NotFound";
+import ChatBot from "./components/ChatBot";
+
 
 const queryClient = new QueryClient();
 
@@ -30,6 +32,7 @@ const App = () => (
             <Route path="/interativo" element={<InterativoPage />} />
             <Route path="/avancado" element={<AvancadoPage />} />
             <Route path="/referencias" element={<ReferenciasPage />} />
+            <Route paath="/chatbot" element={<ChatBot />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>

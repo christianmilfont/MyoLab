@@ -12,6 +12,7 @@ const navLinks = [
   { path: "/interativo", label: "Simulador" },
   { path: "/avancado", label: "Avançado" },
   { path: "/referencias", label: "Referências" },
+  { path: "/chatbot", label: "ChatBot" },
 ];
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
