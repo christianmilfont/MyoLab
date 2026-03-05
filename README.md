@@ -1,6 +1,6 @@
-# Sarcomere Lab
+# MyoLab
 
-Sarcomere Lab é uma plataforma educacional focada em **ciência da musculação, biomecânica e hipertrofia muscular**.
+MyoLab é uma plataforma educacional focada em **ciência da musculação, biomecânica e hipertrofia muscular**.
 
 O objetivo do projeto é traduzir conceitos complexos da fisiologia muscular e da biomecânica do treinamento em conteúdos claros, visuais e interativos para atletas, treinadores e praticantes de musculação.
 
@@ -21,7 +21,7 @@ A proposta é criar um **hub científico da musculação**, baseado em literatur
 
 Grande parte do conteúdo sobre musculação disponível na internet é superficial ou baseado apenas em experiência pessoal.
 
-O Sarcomere Lab busca:
+O MyoLab busca:
 
 - traduzir ciência em conhecimento prático
 - explicar **como a hipertrofia realmente acontece**
@@ -186,29 +186,6 @@ Essas tecnologias permitem criar uma plataforma moderna, rápida e interativa.
 
 O design do Sarcomere Lab segue uma estética científica e minimalista.
 
-Paleta de cores principal:
-
-Preto profundo  
-#0B0B0F
-
-Azul científico  
-#1F3C88
-
-Azul neon  
-#3A86FF
-
-Cinza técnico  
-#D9D9D9
-
-Branco  
-#FFFFFF
-
-Tipografia sugerida:
-
-- Montserrat
-- Poppins
-- Inter
-
 ---
 
 # Público Alvo
@@ -224,7 +201,7 @@ Tipografia sugerida:
 
 # Visão de Futuro
 
-O Sarcomere Lab pretende evoluir para uma plataforma completa de educação em treinamento de força, incluindo:
+O MyoLab pretende evoluir para uma plataforma completa de educação em treinamento de força, incluindo:
 
 - ferramentas interativas
 - biblioteca científica
