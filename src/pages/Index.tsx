@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Zap, Move, Ruler, ArrowRight, Lightbulb, FlaskConical, Target } from "lucide-react";
 import SectionHeader from "@/components/SectionHeader";
+import ChatBot from "@/components/ChatBot";
 
 const pillars = [
   {
@@ -95,6 +96,8 @@ const Index = () => {
           </motion.div>
         </div>
       </section>
+        {/* ChatBot */}
+    <ChatBot />
 
       {/* How Hypertrophy Works */}
       <section className="section-container py-20">

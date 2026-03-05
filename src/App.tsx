@@ -32,7 +32,7 @@ const App = () => (
             <Route path="/interativo" element={<InterativoPage />} />
             <Route path="/avancado" element={<AvancadoPage />} />
             <Route path="/referencias" element={<ReferenciasPage />} />
-            <Route paath="/chatbot" element={<ChatBot />} />
+            <Route path="/chatbot" element={<ChatBot />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
