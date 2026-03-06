@@ -5,6 +5,8 @@ import SectionHeader from "@/components/SectionHeader";
 import ChatBot from "@/components/ChatBot";
 import ChatNotification from "@/components/ChatNotification"
 import mascot from "@/assets/mascotao-preview.png";
+import AnimatedArrow from "@/components/AnimatedArrow";
+
 const pillars = [
   {
     icon: <Zap className="w-6 h-6" />,
@@ -115,7 +117,7 @@ const Index = () => {
           to="/ciencia"
           className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium text-sm hover:bg-primary/90 transition-colors"
         >
-          Explorar a Ciência <ArrowRight className="w-4 h-4" />
+          Explorar a Ciência <AnimatedArrow size={16} className="ml-1" />
         </Link>
 
         <Link
@@ -219,9 +221,9 @@ const Index = () => {
                 </div>
                 <h3 className="font-display font-semibold text-foreground mb-2">{p.title}</h3>
                 <p className="text-sm text-muted-foreground mb-4">{p.desc}</p>
-                <span className="text-primary text-sm font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
-                  Explorar <ArrowRight className="w-4 h-4" />
-                </span>
+               <span className="text-primary text-sm font-medium inline-flex items-center gap-1">
+                  Explorar <AnimatedArrow size={16} className="ml-1 group-hover:ml-2 transition-all" />
+              </span>
               </Link>
             </motion.div>
           ))}

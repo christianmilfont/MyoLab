@@ -15,6 +15,7 @@ import NotFound from "./pages/NotFound";
 import ChatBot from "./components/ChatBot";
 import ChatNotification from "./components/ChatNotification";
 import ScrollToTop from "./components/ScrollToTop";
+import Analytics from "./components/Analytics";
 
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+      <Analytics />  {/* <-- aqui é o GTAG para o google analytics */}
         <ScrollToTop />
         <Layout>
           <Routes>
