@@ -16,6 +16,7 @@ import ChatBot from "./components/ChatBot";
 import ChatNotification from "./components/ChatNotification";
 import ScrollToTop from "./components/ScrollToTop";
 import Analytics from "./components/Analytics";
+import AnimatedLockedPageWrapper from "./components/AnimatedLockedPageWrapper"; {/* Páginas bloqueadas com animação */}
 
 
 const queryClient = new QueryClient();
@@ -32,10 +33,26 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/ciencia" element={<CienciaPage />} />
-            <Route path="/biomecanica" element={<BiomecanicaPage />} />
+            <Route 
+            path="/biomecanica"
+             element={
+              <AnimatedLockedPageWrapper path="/avancado">
+                  <BiomecanicaPage />
+              </AnimatedLockedPageWrapper> 
+             }
+             />
+
             <Route path="/amplitude" element={<AmplitudePage />} />
             <Route path="/interativo" element={<InterativoPage />} />
-            <Route path="/avancado" element={<AvancadoPage />} />
+             
+            <Route
+              path="/avancado"
+              element={
+                <AnimatedLockedPageWrapper path="/avancado">
+                  <AvancadoPage />
+                </AnimatedLockedPageWrapper>
+              }
+            />
             <Route path="/referencias" element={<ReferenciasPage />} />
             <Route path="/chatbot" element={<ChatBot />} />
             <Route path="/chatnotification" element={<ChatNotification />} />
