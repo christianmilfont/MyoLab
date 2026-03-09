@@ -10,6 +10,8 @@ const navLinks = [
   { path: "/biomecanica", label: "Biomecânica" },
   { path: "/amplitude", label: "Amplitude" },
   { path: "/interativo", label: "Simulador" },
+  { path: "/maquinas", label: "Máquinas" },
+  { path: "/academias", label: "Academias" },
   { path: "/avancado", label: "Avançado" },
   { path: "/referencias", label: "Referências" },
 ];
