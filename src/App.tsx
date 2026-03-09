@@ -16,8 +16,8 @@ import ChatBot from "./components/ChatBot";
 import ChatNotification from "./components/ChatNotification";
 import ScrollToTop from "./components/ScrollToTop";
 import Analytics from "./components/Analytics";
-import AnimatedLockedPageWrapper from "./components/AnimatedLockedPageWrapper";import MaquinasPage from "./components/ui/MaquinasPage";
-import AcademiasPage from "./pages/AcademiasPage";
+import AnimatedLockedPageWrapper from "./components/AnimatedLockedPageWrapper";import MaquinasPage from "./pages/v2/MaquinasPage";
+import AcademiasPage from "./pages/v2/AcademiasPage";
  {/* Páginas bloqueadas com animação */}
 
 
