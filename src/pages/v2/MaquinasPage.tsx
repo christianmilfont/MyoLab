@@ -88,7 +88,7 @@ export default function MaquinasPage() {
 
               <img
                 src={machine.image}
-                className="absolute inset-0 w-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover"
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
