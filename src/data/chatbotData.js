@@ -15,8 +15,9 @@ export const chatbotData = [
     reference: "Schoenfeld (2010), Wolf et al. (2023)"
   },
 
+
   {
-    keywords: ["actina", "miosina", "contração"],
+    keywords: ["actina", "miosina", "contração", "contração muscular", "ocorre", "acontece"],
     question: "Como funciona a contração muscular?",
     answer: `
         A contração muscular acontece pela interação entre dois filamentos

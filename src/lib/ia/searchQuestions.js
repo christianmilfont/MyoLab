@@ -1,4 +1,4 @@
-import { chatbotData } from "../data/chatbotData"
+import { chatbotData } from "../../data/chatbotData"
 
 export function searchQuestions(userQuestion) {
 

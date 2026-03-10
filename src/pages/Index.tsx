@@ -1,267 +1,272 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Zap, Move, Ruler, ArrowRight, Lightbulb, FlaskConical, Target } from "lucide-react";
+import {
+  Zap,
+  Move,
+  Ruler,
+  ArrowRight,
+  Lightbulb,
+  FlaskConical,
+  Target,
+  Dumbbell
+} from "lucide-react";
+
 import SectionHeader from "@/components/SectionHeader";
 import ChatBot from "@/components/ChatBot";
-import ChatNotification from "@/components/ChatNotification"
-import mascot from "@/assets/mascotao-preview.png";
+import ChatNotification from "@/components/ChatNotification";
 import AnimatedArrow from "@/components/AnimatedArrow";
+
+import mascot from "@/assets/mascotao-preview.png";
 
 const pillars = [
   {
     icon: <Zap className="w-6 h-6" />,
-    title: "Resistência Mecânica",
-    desc: "Como a tensão mecânica é o principal estímulo para hipertrofia — e como maximizá-la.",
+    title: "Tensão Mecânica",
+    desc: "O principal estímulo hipertrófico, gerado quando o músculo produz força contra resistência.",
     link: "/ciencia",
   },
   {
     icon: <Move className="w-6 h-6" />,
-    title: "Biomecânica dos Movimentos",
-    desc: "Padrões de movimento, vetores de força e como a técnica muda o estímulo muscular.",
+    title: "Biomecânica",
+    desc: "Ângulo articular, vetores de força e execução mudam completamente o estímulo muscular.",
     link: "/biomecanica",
   },
   {
     icon: <Ruler className="w-6 h-6" />,
-    title: "Amplitude e Alongamento sob Carga",
-    desc: "Por que treinar em maior amplitude gera mais hipertrofia — baseado em evidências.",
+    title: "Amplitude",
+    desc: "Treinar em posições alongadas pode aumentar significativamente a hipertrofia.",
     link: "/amplitude",
   },
 ];
 
-const myths = [
-  {
-    myth: "Mais séries = mais hipertrofia sempre",
-    science: "O volume ideal depende da capacidade de recuperação individual. Excesso de volume pode prejudicar a adaptação.",
-  },
-  {
-    myth: "A contração máxima no pico é o que importa",
-    science: "A tensão mecânica na posição alongada parece ser ainda mais relevante para hipertrofia, segundo estudos recentes.",
-  },
-  {
-    myth: "Máquinas são inferiores a pesos livres",
-    science: "Máquinas podem oferecer curvas de resistência mais favoráveis para determinados músculos.",
-  },
-];
-
 const curiosities = [
-  { icon: <FlaskConical className="w-5 h-5" />, text: "O sarcômero é a menor unidade funcional do músculo, com apenas ~2.5 μm de comprimento." },
-  { icon: <Target className="w-5 h-5" />, text: "A tensão mecânica ativa mecanossensores (como a titina) que sinalizam para síntese proteica." },
-  { icon: <Lightbulb className="w-5 h-5" />, text: "Pesquisas recentes mostram que a hipertrofia pode ser regional — diferentes porções do músculo respondem a exercícios diferentes." },
+  {
+    icon: <FlaskConical className="w-5 h-5" />,
+    text: "O sarcômero mede cerca de 2–2.5 μm e é a menor unidade funcional do músculo."
+  },
+  {
+    icon: <Target className="w-5 h-5" />,
+    text: "A proteína titina atua como sensor mecânico durante o alongamento muscular."
+  },
+  {
+    icon: <Lightbulb className="w-5 h-5" />,
+    text: "Hipertrofia pode ser regional — diferentes exercícios estimulam regiões diferentes do músculo."
+  }
 ];
 
-const container = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.1 } },
-};
-
-const item = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-};
+const stats = [
+  { label: "Unidades Motoras", value: "100k+" },
+  { label: "Sarcômeros por Fibra", value: "10.000+" },
+  { label: "Tempo de Contração", value: "5 ms" },
+];
 
 const Index = () => {
   return (
     <div>
-      {/* Hero */}
+
+      {/* HERO */}
 
       <section
-  className="relative overflow-hidden"
-  style={{ background: "var(--gradient-hero)" }}
->
+        className="relative overflow-hidden"
+        style={{ background: "var(--gradient-hero)" }}
+      >
 
-  {/* Mascote grande no fundo */}
-  <img
-    src={mascot}
-    alt="MyoLab Mascot"
-    className="
-    absolute
-    right-[-150px]
-    top-[-50px]
-    w-[1000px]
-    opacity-70
-    pointer-events-none
-    select-none
-    z-0
-    "
-  />
+        {/* Mascote */}
 
-  {/* Glow radial */}
-  <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,hsl(210_100%_55%/0.15),transparent_70%)]" />
-
-  {/* Conteúdo */}
-  <div className="section-container relative py-24 md:py-36 z-10">
-
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.7 }}
-      className="max-w-3xl"
-    >
-      <span className="info-badge mb-6 inline-block">
-        Biomecânica & Hipertrofia
-      </span>
-
-      <h1 className="font-display text-4xl md:text-6xl font-bold text-foreground leading-tight">
-        A ciência por trás do{" "}
-        <span className="gradient-text">crescimento muscular</span>
-      </h1>
-
-      <p className="mt-6 text-lg text-muted-foreground max-w-xl leading-relaxed">
-        Entenda como a tensão mecânica, a biomecânica dos exercícios e a amplitude de
-        movimento se combinam para gerar hipertrofia. Conteúdo baseado em evidências
-        científicas.
-      </p>
-
-      <div className="flex flex-wrap gap-3 mt-8">
-        <Link
-          to="/ciencia"
-          className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium text-sm hover:bg-primary/90 transition-colors"
-        >
-          Explorar a Ciência <AnimatedArrow size={16} className="ml-1" />
-        </Link>
-
-        <Link
-          to="/interativo"
-          className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-secondary text-secondary-foreground font-medium text-sm hover:bg-secondary/80 transition-colors border border-border"
-        >
-          Simulador Interativo
-        </Link>
-      </div>
-
-    </motion.div>
-
-  </div>
-
-</section>
-        {/* ChatBot */}
-    <ChatNotification />
-    <ChatBot />
-
-      {/* How Hypertrophy Works */}
-      <section className="section-container py-20">
-        <SectionHeader
-          badge="Fundamentos"
-          title="Como a Hipertrofia Muscular Acontece?"
-          description="A hipertrofia é o aumento da seção transversal das fibras musculares, resultado da acumulação de proteínas contráteis (actina e miosina) em resposta ao estímulo mecânico."
+        <img
+          src={mascot}
+          alt="MyoLab Mascot"
+          className="
+          absolute
+          right-[-120px]
+          top-[-20px]
+          w-[900px]
+          opacity-60
+          pointer-events-none
+          select-none
+          z-0
+          "
         />
-        <div className="grid md:grid-cols-3 gap-4 mt-8">
-          {[
-            { title: "Estímulo Mecânico", desc: "O músculo é submetido a tensão mecânica durante o exercício resistido." },
-            { title: "Sinalização Celular", desc: "Mecanossensores ativam vias de sinalização como mTOR, estimulando síntese proteica." },
-            { title: "Adaptação Estrutural", desc: "Novas proteínas são adicionadas aos sarcômeros, aumentando o tamanho da fibra muscular." },
-          ].map((step, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.15, duration: 0.5 }}
-              className="pillar-card text-center"
-            >
-              <div className="w-10 h-10 rounded-full bg-primary/15 flex items-center justify-center text-primary font-display font-bold mx-auto mb-4">
-                {i + 1}
-              </div>
-              <h3 className="font-display font-semibold text-foreground mb-2">{step.title}</h3>
-              <p className="text-sm text-muted-foreground">{step.desc}</p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
 
-      {/* Mechanical Tension */}
-      <section className="bg-secondary/30 py-20">
-        <div className="section-container">
-          <SectionHeader
-            badge="Conceito Central"
-            title="Tensão Mecânica: O Principal Driver da Hipertrofia"
-            description="Dentre os mecanismos propostos para hipertrofia (tensão mecânica, estresse metabólico e dano muscular), a tensão mecânica é considerada o estímulo primário."
-          />
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="pillar-card">
-              <h3 className="font-display font-semibold text-foreground mb-3">O que é tensão mecânica?</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                É a força aplicada ao músculo durante a contração. Quando o músculo gera força contra uma
-                resistência externa, as fibras musculares experimentam tensão mecânica. Essa tensão é
-                detectada por mecanossensores na membrana celular, que ativam cascatas de sinalização
-                intracelular levando à síntese de novas proteínas contráteis.
-              </p>
-            </div>
-            <div className="pillar-card">
-              <h3 className="font-display font-semibold text-foreground mb-3">Por que cargas moderadas a altas?</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Para maximizar a tensão mecânica, é necessário recrutar o maior número possível de unidades
-                motoras, especialmente as de alto limiar (fibras tipo II). Cargas moderadas a altas (acima de
-                ~60% de 1RM) ou séries levadas próximo à falha garantem o recrutamento progressivo dessas
-                unidades motoras, maximizando o estímulo hipertrófico.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+        {/* Glow */}
 
-      {/* Three Pillars */}
-      <section className="section-container py-20">
-        <SectionHeader
-          badge="Explore"
-          title="Os Três Pilares do MyoLab"
-          description="Navegue pelos conceitos fundamentais que conectam ciência e prática na musculação."
-        />
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="grid md:grid-cols-3 gap-6"
-        >
-          {pillars.map((p) => (
-            <motion.div key={p.title} variants={item}>
-              <Link to={p.link} className="pillar-card block h-full group">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4 group-hover:bg-primary/20 transition-colors">
-                  {p.icon}
-                </div>
-                <h3 className="font-display font-semibold text-foreground mb-2">{p.title}</h3>
-                <p className="text-sm text-muted-foreground mb-4">{p.desc}</p>
-               <span className="text-primary text-sm font-medium inline-flex items-center gap-1">
-                  Explorar <AnimatedArrow size={16} className="ml-1 group-hover:ml-2 transition-all" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(210_100%_55%/0.15),transparent_70%)]" />
+
+        <div className="section-container relative py-28 z-10">
+
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="max-w-3xl"
+          >
+
+            <span className="info-badge mb-6 inline-block">
+              Plataforma Científica de Hipertrofia
+            </span>
+
+            <h1 className="font-display text-5xl md:text-6xl font-bold leading-tight">
+              A ciência por trás do{" "}
+              <span className="gradient-text">
+                crescimento muscular
               </span>
-              </Link>
-            </motion.div>
-          ))}
-        </motion.div>
-      </section>
+            </h1>
 
-      {/* Myths vs Science */}
-      <section className="bg-secondary/30 py-20">
-        <div className="section-container">
-          <SectionHeader badge="Mitos vs Ciência" title="O Que a Ciência Realmente Diz" />
-          <div className="space-y-6 max-w-3xl mx-auto">
-            {myths.map((m, i) => (
+            <p className="mt-6 text-lg text-muted-foreground max-w-xl leading-relaxed">
+              Entenda como biomecânica, tensão mecânica e amplitude de movimento
+              determinam o estímulo hipertrófico. Tudo baseado em literatura
+              científica moderna.
+            </p>
+
+            <div className="flex flex-wrap gap-4 mt-8">
+
+              <Link
+                to="/ciencia"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium text-sm hover:bg-primary/90 transition-colors"
+              >
+                Explorar a Ciência
+                <AnimatedArrow size={16}/>
+              </Link>
+
+              <Link
+                to="/maquinas"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border bg-secondary hover:bg-secondary/70 text-sm"
+              >
+                Biblioteca de Exercícios
+                <Dumbbell size={16}/>
+              </Link>
+
+            </div>
+
+          </motion.div>
+
+
+          {/* Stats */}
+
+          <div className="grid grid-cols-3 gap-6 mt-16 max-w-xl">
+
+            {stats.map((s, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="grid md:grid-cols-2 gap-4"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.15 }}
+                className="glass-card text-center p-4 rounded-xl"
               >
-                <div className="myth-card myth">
-                  <p className="text-xs font-medium text-destructive uppercase tracking-wider mb-1">Mito</p>
-                  <p className="text-sm text-foreground">{m.myth}</p>
-                </div>
-                <div className="myth-card science">
-                  <p className="text-xs font-medium text-primary uppercase tracking-wider mb-1">Ciência</p>
-                  <p className="text-sm text-foreground">{m.science}</p>
-                </div>
+
+                <p className="text-2xl font-bold text-primary">
+                  {s.value}
+                </p>
+
+                <p className="text-xs text-muted-foreground mt-1">
+                  {s.label}
+                </p>
+
               </motion.div>
             ))}
+
           </div>
+
         </div>
+
       </section>
 
-      {/* Curiosities */}
+
+      {/* CHATBOT */}
+
+      <ChatNotification />
+      <ChatBot />
+
+
+      {/* PILLARS */}
+
       <section className="section-container py-20">
-        <SectionHeader badge="Curiosidades" title="Fatos Científicos Fascinantes" />
-        <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+
+        <SectionHeader
+          badge="Fundamentos"
+          title="Os Pilares da Hipertrofia"
+          description="Três princípios fundamentais explicam a maior parte das adaptações musculares ao treinamento."
+        />
+
+        <div className="grid md:grid-cols-3 gap-6 mt-10">
+
+          {pillars.map((p, i) => (
+            <motion.div
+              key={p.title}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+            >
+
+              <Link
+                to={p.link}
+                className="pillar-card block group"
+              >
+
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4 group-hover:bg-primary/20 transition">
+                  {p.icon}
+                </div>
+
+                <h3 className="font-display font-semibold text-foreground mb-2">
+                  {p.title}
+                </h3>
+
+                <p className="text-sm text-muted-foreground mb-4">
+                  {p.desc}
+                </p>
+
+                <span className="text-primary text-sm flex items-center gap-1">
+                  Explorar
+                  <ArrowRight size={16}/>
+                </span>
+
+              </Link>
+
+            </motion.div>
+          ))}
+
+        </div>
+
+      </section>
+
+
+      {/* EXERCISE LIBRARY CTA */}
+
+      <section className="bg-secondary/30 py-20">
+
+        <div className="section-container text-center max-w-3xl">
+
+          <SectionHeader
+            badge="Exercícios"
+            title="Biblioteca Científica de Exercícios"
+            description="Explore exercícios analisados pela biomecânica, vetores de força e estímulo muscular."
+          />
+
+          <Link
+            to="/maquinas"
+            className="inline-flex items-center gap-2 mt-6 px-7 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90"
+          >
+            Ver Exercícios
+            <ArrowRight size={18}/>
+          </Link>
+
+        </div>
+
+      </section>
+
+
+      {/* CURIOSITIES */}
+
+      <section className="section-container py-20">
+
+        <SectionHeader
+          badge="Curiosidades"
+          title="Fatos Fascinantes da Fisiologia Muscular"
+        />
+
+        <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-10">
+
           {curiosities.map((c, i) => (
             <motion.div
               key={i}
@@ -269,14 +274,24 @@ const Index = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="glass-card rounded-xl p-5"
+              className="glass-card rounded-xl p-6"
             >
-              <div className="text-accent mb-3">{c.icon}</div>
-              <p className="text-sm text-secondary-foreground leading-relaxed">{c.text}</p>
+
+              <div className="text-primary mb-3">
+                {c.icon}
+              </div>
+
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {c.text}
+              </p>
+
             </motion.div>
           ))}
+
         </div>
+
       </section>
+
     </div>
   );
 };
