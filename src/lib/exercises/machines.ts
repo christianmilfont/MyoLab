@@ -24,7 +24,7 @@ export const machines: Machine[] = [
     advantages: ["Isolamento", "Seguro", "Alta tensão"],
     activation: ["Peitoral maior", "Deltoide anterior"],
     video: "https://www.youtube.com/embed/eozdVDA78K0",
-    image: "/src/assets/machines/peck-deck.jpg",
+    image: "/machines/peck-deck.jpg",
   },
 
   {
@@ -37,7 +37,7 @@ export const machines: Machine[] = [
     advantages: ["Tensão contínua", "Versátil"],
     activation: ["Peitoral maior", "Deltoide anterior"],
     video: "https://www.youtube.com/embed/taI4XduLpTk",
-    image: "/src/assets/machines/crossover.jpg",
+    image: "/machines/crossover.jpg",
   },
 
   {
@@ -50,7 +50,7 @@ export const machines: Machine[] = [
     advantages: ["Estável", "Alta carga"],
     activation: ["Peitoral maior", "Tríceps", "Deltoide anterior"],
     video: "https://www.youtube.com/embed/vthMCtgVtFw",
-    image: "/src/assets/machines/chest-press.jpg",
+    image: "/machines/chest-press.jpg",
   },
 
   {
@@ -63,7 +63,7 @@ export const machines: Machine[] = [
     advantages: ["Tensão contínua"],
     activation: ["Tríceps lateral", "Tríceps medial"],
     video: "https://www.youtube.com/embed/2-LAMcpzODU",
-    image: "/src/assets/machines/triceps-pulley.jpg",
+    image: "/machines/triceps-pulley.jpg",
   },
 
   {
@@ -76,6 +76,6 @@ export const machines: Machine[] = [
     advantages: ["Isolamento"],
     activation: ["Bíceps braquial", "Braquial"],
     video: "https://www.youtube.com/embed/ykJmrZ5v0Oo",
-    image: "/src/assets/machines/biceps-machine.jpg",
+    image: "/machines/biceps-machine.jpg",
   }
 ];
